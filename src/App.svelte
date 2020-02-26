@@ -47,21 +47,19 @@
 </script>
 
 <style>
-	#control {
-		position: absolute;
-		padding: 8px;
-	}
-	#view {
-		mask-origin: content-box;
-		mask-clip: view-box;
-	}
 	canvas {
 		width: 100%;
 		height: 100%;
 		background-color: #666;
-		border: 2px solid black;
 		-webkit-mask: url("svelte-logo-mask.svg") 50% 50% no-repeat;
 		mask: url("svelte-logo-mask.svg") 50% 50% no-repeat;
+		mask-origin: content-box;
+		mask-clip: view-box;
+	}
+	#control {
+		position: absolute;
+		padding: 8px;
+		top: 8px;
 	}
 </style>
 
