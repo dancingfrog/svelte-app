@@ -2,8 +2,11 @@
 	import { onMount } from 'svelte';
 	import Keypad from './Keypad.svelte';
 
+	export let title;
+
 	let pin;
-	$: view = pin ? pin.replace(/\d(?!$)/g, '"') : 'enter your pin';
+	let view;
+	$: view = pin ? pin.replace(/\d(?!$)/g, '*') : 'enter your pin';
 
 	function handleSubmit() {
 		alert(`submitted ${pin}`);
@@ -59,11 +62,16 @@
 	#control {
 		position: absolute;
 		padding: 8px;
-		top: 8px;
+		bottom: 8px;
+		right: 8px;
+	}
+	#view h1 {
+		text-align: center;
 	}
 </style>
 
 <div id="view">
+	<h1>{title}</h1>
 	<canvas
 			bind:this={canvas}
 			width={32}
