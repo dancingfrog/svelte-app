@@ -18,10 +18,10 @@ export default {
 	plugins: [
 		copy({
 			targets: [
-				{ src: 'static/*', dest: 'public/' },
-				{ src: 'static/**/*', dest: 'public/' },
-				{ src: 'src/*.svg', dest: 'public/' },
-				{ src: 'src/**/*.svg', dest: 'public/' }
+				{ src: 'src/fonts', dest: 'public/' },
+				{ src: 'src/images', dest: 'public/' },
+				{ src: 'src/styles', dest: 'public/' },
+				{ src: 'static/*', dest: 'public/' }
 			]
 		}),
 		svelte({
