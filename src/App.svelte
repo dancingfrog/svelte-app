@@ -54,18 +54,25 @@
 		width: 100%;
 		height: 100%;
 		background-color: #666;
-		-webkit-mask: url("svelte-logo-mask.svg") 50% 50% no-repeat;
-		mask: url("svelte-logo-mask.svg") 50% 50% no-repeat;
-		mask-origin: content-box;
-		mask-clip: view-box;
+		-webkit-mask: url("svelte-logo-mask.svg") 50% 50% content-box view-box no-repeat;
+		mask: url("svelte-logo-mask.svg") 50% 50% content-box view-box no-repeat;
 	}
 	#control {
 		position: absolute;
 		padding: 8px;
 		bottom: 8px;
 		right: 8px;
+		width: 256px;
+		top: calc(50vh - (
+			100px /* height */
+			/ 2
+		));
+		left: calc(50vw - (
+			256px /* width */
+			/ 2
+		));
 	}
-	#view h1 {
+	#view {
 		text-align: center;
 	}
 </style>
