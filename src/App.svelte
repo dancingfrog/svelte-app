@@ -89,6 +89,6 @@
 </div>
 
 <div id="control">
-	<h1 style="color: {pin ? '#333' : '#ccc'}">{view}</h1>
+	<h1 style="color: {pin ? '#ccc' : '#fff'}">{view}</h1>
 	<Keypad bind:value={pin} on:submit={handleSubmit}/>
 </div>
